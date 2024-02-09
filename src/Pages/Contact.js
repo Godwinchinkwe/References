@@ -36,11 +36,18 @@ const Contact = () => {
         <section class="section_b">
           <h1>Please Drop a message </h1>
           <div class="contact_inputname">
-            <input placeholder='Name'
-            />
-             <input placeholder='Gmail'/>
+          <div className='aaa'>
+            <FaLocationDot className="iconss"/>
+            <input className='cont-inpt' type='text' placeholder='Name'/>
+            </div>
+
+            <div className='aaa'>
+            <FaLocationDot className="iconss"/>
+            <input className="cont-inpt" type='text' placeholder='Name'/>
+            </div>
           </div>
-          <input placeholder='Subject'/>
+
+          <input  placeholder='Subject'/>
           <textarea
           placeholder='Message'></textarea>
           <button> Send Message</button>
