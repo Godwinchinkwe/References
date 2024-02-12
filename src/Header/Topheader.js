@@ -12,24 +12,26 @@ import { MdOutlineMarkEmailUnread } from "react-icons/md";
 
 const Topheader = () => {
   return (
-    <div class="maintopheader">
+    <div class="maxpheader">
+       <div class="maintopheader">
         <div class="topheader_wrap">
         <span class="toph"><FaLocationDot fontSize="20px" /> <p> Golden tulip Airport Road</p> </span>
         <span class="toph"><BsFillTelephoneFill fontSize="20px"/>: <p>08064318819</p></span>
         <span class="toph"> <MdOutlineMarkEmailUnread fontSize="20px"/>:<p>Devodinakachi@gmail.com</p></span>
-        
-        
-
         </div>
+
         <div class="topheader_right">
         <FaFacebook fontSize="25px" />
         <FaXTwitter fontSize="22px" />
         <TiSocialLinkedinCircular fontSize="25px" />
         <IoLogoInstagram fontSize="25px" />
-        <FaYoutube fontSize="25px" />
-            
+        <FaYoutube fontSize="25px" />    
         </div>
     </div>
+      
+
+    </div>
+   
   )
 }
 

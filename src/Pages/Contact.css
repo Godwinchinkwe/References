@@ -178,6 +178,10 @@
 
 }
 
+.about_wrap{
+    width: 100%;
+}
+
 .gray{
     background: white;
     color: rgb(61, 56, 56);

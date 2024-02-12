@@ -4,7 +4,7 @@ import "./Contact.css"
 
 const About = () => {
   return (
-    <div>
+    <div className='about_wrap'>
       {/* <h1>About page</h1> */}
       <Contactform />
 
