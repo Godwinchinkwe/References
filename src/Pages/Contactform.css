@@ -1,0 +1,116 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.contactform_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background: gray; */
+    margin-top: 100px;
+    /* margin: auto; */
+    /* justify-content: center; */
+    align-items: center;
+}
+.contactform_wrap{
+    display: flex;
+    flex-direction: column;
+    background:rgb(130, 145, 130);
+    width: 600px;
+    justify-content: center;
+    text-align: center;
+    justify-content: center;
+    
+}
+.sign_topcontent{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+.underline{
+    width: 61px;
+    height: 6px;
+    border-radius: 9px;
+    background: rgb(29, 29, 177);
+}
+.sign_text{
+    font-size: 48px;
+    font-weight: 600;
+    color: rgb(29, 29, 177);
+}
+
+.input_wrap{
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+    gap: 25px;
+}
+
+.input_sign{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    height: 70px;
+    border-radius: 6px;
+    background: #e0d8d8;
+    
+}
+.inputss{
+    height: 50px;
+    width: 400px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 19px;
+    color: rgb(46, 23, 23);
+}
+.signupbutton{
+    display: flex;
+    gap: 30px;
+    margin: 60px auto;
+}
+
+.signup_icon{
+    margin: 0px 20px ;
+    font-size: 30px;
+}
+
+.btn_sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(70, 62, 134);
+    cursor: pointer;
+    width: 150px;
+    height:50px;
+    font-size: 19px;
+    font-weight: 700;
+    border-radius: 50px;
+    color: white;
+}
+
+.btn_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: purple; */
+    cursor: pointer;
+    width: 150px;
+    height:50px;
+    font-size: 19px;
+    font-weight: 700;
+    border-radius: 50px;
+    color: rgb(31, 14, 14);
+}
+.passwordeye{
+    font-size: 25px;
+}
+.passwordclose{
+    font-size: 25px;
+}
