@@ -5,18 +5,23 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import { IoPerson } from "react-icons/io5";
 import { AiOutlineEye } from "react-icons/ai";
 import { AiOutlineEyeInvisible } from "react-icons/ai";
+import axios from "axios"
+import { useNavigate } from 'react-router-dom'
 
 
 const Contactform = () => {
+  const navigate = useNavigate()
   // const [inputs, setInputs] = useState({});
 
   const [ inputs, setInputs] = useState({
-    name: "",
-     email: "",
-     password:"",
-     admin: false,
-     required:"",
+    // name: "",
+    //  email: "",
+    //  password:"",
+    //  admin: false,
+    //  required:"",
    });
+
+ 
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -24,15 +29,39 @@ const Contactform = () => {
     setInputs(values => ({...values, [name]: value}))
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(inputs);
-  }
+
+
+  const handleSubmit = async (event) => {
+    try {
+      // setSpin(true)
+      event.preventDefault();
+      const config = {
+        headers:{
+          "Content-Type":"application/json"
+        }
+      }
+      const response = await axios.post("https://agri-market.onrender.com/api/user", inputs, config);
+      console.log(response);
+      if(response.status === 201) {
+        navigate('/Menu')
+      }
+      
+    } catch (error) {
+      if(error) {
+        alert(error.response.data.message)
+        window.location.reload()
+      }
+        console.log("error message",  error)
+        console.log("response error", error.response.data.message)
+    }
+  };
+
+  
 
 
   return (
     <div className='contactform_container'>
-      <div className='contactform_wrap' onSubmit={handleSubmit}>
+      <form className='contactform_wrap' onSubmit={handleSubmit}>
         <div className='sign_topcontent'>
          <h1 className='sign_text'>Sign Up</h1>
          <div className='underline'></div>
@@ -79,7 +108,7 @@ const Contactform = () => {
           <button className='btn_sign' type="submit">Sign Up</button>
           <button className='btn_login'>Login </button>
         </div>
-      </div>
+      </form>
 
     </div>
   )
